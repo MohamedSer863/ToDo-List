@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ToDo-list.css">
+    <link rel="stylesheet" href="tablestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Sixtyfour&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="section1">
+        
+    </section>
+    <section class="section2">
+        <div class ="container">
+
+                <div class="nav">
+                <h1 class="title1">write your toDo-list hier</h1>
+                <button onclick="showBox()" id="sub" class="sub">Do an work</button>
+                <audio id="audioElement">
+                    <source src="photos/mixkit-extra-bonus-in-a-video-game-2045 (1).wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+            <hr>
+                <div class="it"id="it">
+                    <div id="container-box" class="container-box"></div>
+                    <button id="add" class="button">
+                        ADD
+                      </button>
+                      <button id="CancelButton" class="button1">
+                        CANCEL
+                      </button>
+                    <div id="box" class="box"></div>
+                    <h1 class="text1">wriht your task</h1>
+                    <input id="inputx" class="input" placeholder="text">
+                    <h1 class="text2">Degree of difficulty</h1>
+                    <select id="book" class="book" >
+                        <option value="easy">easy</option>
+                        <option value="midlle">midlle</option>
+                        <option value="hard">hard</option>
+
+                    </select>
+                    
+                    <h1 class="text3">discription</h1>
+                    <textarea id="story" name="story" rows="5" maxlength="150" cols="33">
+                    
+                    </textarea> 
+                    <h2 class="texttime">Enter a Time:</h2>
+                    <div class="timebox">     
+                      
+                      <input type="time" id="timeInput">
+                      <button id="addtime">Add</button>
+                  </div>    
+                </div>
+
+        </div>
+        <!-- <div class="taskpalce">
+            <section class="wrapper">
+                
+                <main class="row title2">
+                  <ul>
+                    <li>Task</li>
+                    <li>Time</li>
+                    <li> difficulty</li>
+                    <li>Finish</li>
+                    <li>Delet</li>
+                  </ul>
+                </main>
+                <section id="row-fadeOut-wrapper" class="row-fadeOut-wrapper">
+                  <article class="row nfl">
+                    <ul id="fathertask">
+                      <li> raed a book</li>
+                      <li> 00:00</li>
+                      <li>easy</li>
+                      <li>finish</li>
+                      <li>delet</li>
+                    </ul>
+                    <ul class="more-content">
+                      <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum minima accusantium eos voluptatem aliquid sint possimus veritatis at impedit? Officiis. Lorem ipsum dolor sit amet.
+                      </li>
+                    </ul>
+                </section>
+               -->
+          <div class="table">
+            <div class="main-row">
+              <h1 >Task</h1>
+              <h1 >difficulty</h1>
+              <h1 >Time</h1>
+              <h1 >Finish</h1>
+              <h1 >Delet</h1>
+            </div>
+            <div class="row-fadeOut-wrapper">
+              <h1 class="hh">sport</h1>
+              <h1 class="hh">midlle</h1>
+              <h1 class="hh">2h</h1>
+              <h1 class="container-chekbox">
+                <label class="containerl">
+                  <input checked="checked" type="checkbox">
+                  <div class="checkmark"></div>
+                </label>
+              </h1>
+              <button class="bin-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 39 7"
+                  class="bin-top"
+                >
+                  <line stroke-width="4" stroke="white" y2="5" x2="39" y1="5"></line>
+                  <line
+                    stroke-width="3"
+                    stroke="white"
+                    y2="1.5"
+                    x2="26.0357"
+                    y1="1.5"
+                    x1="12"
+                  ></line>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 33 39"
+                  class="bin-bottom"
+                >
+                  <mask fill="white" id="path-1-inside-1_8_19">
+                    <path
+                      d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z"
+                    ></path>
+                  </mask>
+                  <path
+                    mask="url(#path-1-inside-1_8_19)"
+                    fill="white"
+                    d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"
+                  ></path>
+                  <path stroke-width="4" stroke="white" d="M12 6L12 29"></path>
+                  <path stroke-width="4" stroke="white" d="M21 6V29"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 89 80"
+                  class="garbage"
+                >
+                  <path
+                    fill="white"
+                    d="M20.5 10.5L37.5 15.5L42.5 11.5L51.5 12.5L68.75 0L72 11.5L79.5 12.5H88.5L87 22L68.75 31.5L75.5066 25L86 26L87 35.5L77.5 48L70.5 49.5L80 50L77.5 71.5L63.5 58.5L53.5 68.5L65.5 70.5L45.5 73L35.5 79.5L28 67L16 63L12 51.5L0 48L16 25L22.5 17L20.5 10.5Z"
+                  ></path>
+                </svg>
+              </button>
+              
+            </div>
+            <div class="row-fadeOut-wrapper">
+              <h1 class="hh">sport</h1>
+              <h1 class="hh">midlle</h1>
+              <h1 class="hh">2h</h1>
+              <h1 class="container-chekbox">
+                <label class="containerl">
+                  <input checked="checked" type="checkbox">
+                  <div class="checkmark"></div>
+                </label>
+              </h1>
+              <button class="bin-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 39 7"
+                  class="bin-top"
+                >
+                  <line stroke-width="4" stroke="white" y2="5" x2="39" y1="5"></line>
+                  <line
+                    stroke-width="3"
+                    stroke="white"
+                    y2="1.5"
+                    x2="26.0357"
+                    y1="1.5"
+                    x1="12"
+                  ></line>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 33 39"
+                  class="bin-bottom"
+                >
+                  <mask fill="white" id="path-1-inside-1_8_19">
+                    <path
+                      d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z"
+                    ></path>
+                  </mask>
+                  <path
+                    mask="url(#path-1-inside-1_8_19)"
+                    fill="white"
+                    d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"
+                  ></path>
+                  <path stroke-width="4" stroke="white" d="M12 6L12 29"></path>
+                  <path stroke-width="4" stroke="white" d="M21 6V29"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 89 80"
+                  class="garbage"
+                >
+                  <path
+                    fill="white"
+                    d="M20.5 10.5L37.5 15.5L42.5 11.5L51.5 12.5L68.75 0L72 11.5L79.5 12.5H88.5L87 22L68.75 31.5L75.5066 25L86 26L87 35.5L77.5 48L70.5 49.5L80 50L77.5 71.5L63.5 58.5L53.5 68.5L65.5 70.5L45.5 73L35.5 79.5L28 67L16 63L12 51.5L0 48L16 25L22.5 17L20.5 10.5Z"
+                  ></path>
+                </svg>
+              </button>
+              
+            </div>
+            <div class="row-fadeOut-wrapper">
+              <h1 class="hh">sport</h1>
+              <h1 class="hh">midlle</h1>
+              <h1 class="hh">2h</h1>
+              <h1 class="container-chekbox">
+                <label class="containerl">
+                  <input checked="checked" type="checkbox">
+                  <div class="checkmark"></div>
+                </label>
+              </h1>
+              <button class="bin-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 39 7"
+                  class="bin-top"
+                >
+                  <line stroke-width="4" stroke="white" y2="5" x2="39" y1="5"></line>
+                  <line
+                    stroke-width="3"
+                    stroke="white"
+                    y2="1.5"
+                    x2="26.0357"
+                    y1="1.5"
+                    x1="12"
+                  ></line>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 33 39"
+                  class="bin-bottom"
+                >
+                  <mask fill="white" id="path-1-inside-1_8_19">
+                    <path
+                      d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z"
+                    ></path>
+                  </mask>
+                  <path
+                    mask="url(#path-1-inside-1_8_19)"
+                    fill="white"
+                    d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"
+                  ></path>
+                  <path stroke-width="4" stroke="white" d="M12 6L12 29"></path>
+                  <path stroke-width="4" stroke="white" d="M21 6V29"></path>
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 89 80"
+                  class="garbage"
+                >
+                  <path
+                    fill="white"
+                    d="M20.5 10.5L37.5 15.5L42.5 11.5L51.5 12.5L68.75 0L72 11.5L79.5 12.5H88.5L87 22L68.75 31.5L75.5066 25L86 26L87 35.5L77.5 48L70.5 49.5L80 50L77.5 71.5L63.5 58.5L53.5 68.5L65.5 70.5L45.5 73L35.5 79.5L28 67L16 63L12 51.5L0 48L16 25L22.5 17L20.5 10.5Z"
+                  ></path>
+                </svg>
+              </button>
+              
+            </div>
+        
+          
+            
+              
+
+              
+        </div>
+    </section>
+</body>
+<script>
+document.getElementById("addtime").addEventListener("click", function() {
+    var timeValue = document.getElementById("timeInput").value;
+    console.log("Time entered:", timeValue);
+    // You can perform further actions with the time value here
+});
+document.getElementById("sub").addEventListener("click",function(){
+    var container = document.getElementById("it");
+    container.style.display = "flex";
+    //     // Trigger reflow to ensure the transition is applied
+    void container.offsetWidth;
+    container.style.opacity = "1"; // Change opacity to 1 to show the box
+})
+document.getElementById("CancelButton").addEventListener("click",function(){
+    var container = document.getElementById("it");
+    container.style.display = "none";
+})
+document.getElementById('sub').addEventListener('click', function() {
+  var audio = document.getElementById('audioElement');
+  audio.play();
+});
+document.getElementById('add').addEventListener('click', function() {
+  var audio = document.getElementById('audioElement');
+  audio.play();
+});
+
+document.getElementById('CancelButton').addEventListener('click', function() {
+  var audio = document.getElementById('audioElement');
+  audio.play();
+});
+
+
+// var tasks = [];
+
+// document.getElementById("add").addEventListener("click", function() {
+//     var taskname = document.getElementById("inputx").value;
+//     var tasktime = document.getElementById("timeInput").value;
+//     var taskdgree = document.getElementById("book").value;
+//     var taskdescription = document.getElementById("story").value;
+
+//     tasks.push({ taskname: taskname, tasktime: tasktime, taskdgree: taskdgree, taskdescription: taskdescription });
+
+    
+//     var ulElement = document.createElement("ul");
+
+
+//     var liElement1 = document.createElement("li");
+//     var textNode1 = document.createTextNode(taskname);
+//     liElement1.appendChild(textNode1);
+//     ulElement.appendChild(liElement1);
+
+//     var liElement2 = document.createElement("li");
+//     var textNode2 = document.createTextNode(tasktime);
+//     liElement2.appendChild(textNode2);
+//     ulElement.appendChild(liElement2);
+
+//     var liElement3 = document.createElement("li");
+//     var textNode3 = document.createTextNode(taskdgree);
+//     liElement3.appendChild(textNode3);
+//     ulElement.appendChild(liElement3);
+
+//     var liElement4 = document.createElement("li");
+//     var textNode4 = document.createTextNode(taskdescription);
+//     liElement4.appendChild(textNode4);
+//     ulElement.appendChild(liElement4);
+
+//     var parentElement = document.querySelector(".row-fadeOut-wrapper");
+//     parentElement.appendChild(ulElement0); // Append ulElement0 to the parent element
+// });
+
+
+// document.getElementById("add").addEventListener("click",function(){
+//   var taskname = document.getElementById("inputx").value;
+//     var tasktime = document.getElementById("timeInput").value;
+//     var taskdgree = document.getElementById("book").value;
+// var tasks = [
+//   {
+//     "taskName" : taskname,
+//     "tasktime" : tasktime,
+//     "taskdgree" : taskdgree
+//   }
+// ];
+// var liElement = document.createElement( `
+//     <section class="row-fadeOut-wrapper">
+//                   <article class="row nfl">
+//                     <ul id="fathertask">
+//                       <li>${tasks}[0]</li>
+//                       <li></li>
+//                       <li></li>
+//                       <li></li>
+//                       <li></li>
+//                     </ul>
+//                     <ul class="more-content">
+//                       <li>
+
+//                       </li>
+//                     </ul>
+//       </section>
+// `);
+// document.getElementById("row-fadeOut-wrapper").appendChild(hElement)
+
+// })
+
+var tasks = [
+  {
+    "taskName" : "sport",
+    "tasktime" : "2h",
+    "taskdgree" : "midlle"
+  }
+];
+
+document.getElementById("row-fadeOut-wrapper").innerHTML = `<h1>${tasks[0].taskName}</h1>`;
+
+
+
+</script>
+</html>
+
+
+
+
+
